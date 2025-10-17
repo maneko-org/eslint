@@ -1,9 +1,9 @@
-import antfu from '@antfu/eslint-config';
-import pluginReact from 'eslint-plugin-react';
+import antfu from '@antfu/eslint-config'
+import pluginReact from 'eslint-plugin-react'
 
 /** @type {import('@maneko/eslint').Eslint} */
 export const eslint = ({ ...options }, ...configs) => {
-  const stylistic = options?.stylistic ?? false;
+  const stylistic = options?.stylistic ?? false
 
   if (options.react) {
     configs.unshift({
@@ -14,8 +14,8 @@ export const eslint = ({ ...options }, ...configs) => {
       rules: {
         ...Object.entries(pluginReact.configs.recommended.rules).reduce(
           (acc, [key, value]) => {
-            acc[key.replace('react', 'maneko-react')] = value;
-            return acc;
+            acc[key.replace('react', 'maneko-react')] = value
+            return acc
           },
           {},
         ),
@@ -34,7 +34,7 @@ export const eslint = ({ ...options }, ...configs) => {
           version: 'detect',
         },
       },
-    });
+    })
   }
 
   if (stylistic) {
@@ -67,11 +67,11 @@ export const eslint = ({ ...options }, ...configs) => {
         'style/quotes': ['error', 'single', { allowTemplateLiterals: true }],
         'style/semi': ['error', 'always'],
       },
-    });
+    })
   }
 
   return antfu(
-    { ...options, stylistic },
+    { ...options },
     {
       name: 'maneko/rewrite',
       rules: {
@@ -165,5 +165,5 @@ export const eslint = ({ ...options }, ...configs) => {
       },
     },
     ...configs,
-  );
-};
+  )
+}
