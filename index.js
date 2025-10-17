@@ -1,50 +1,9 @@
 import antfu from '@antfu/eslint-config';
-import pluginNext from '@next/eslint-plugin-next';
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
 
 /** @type {import('@maneko/eslint').Eslint} */
-export const eslint = (
-  { jsxA11y = false, next = false, ...options },
-  ...configs
-) => {
+export const eslint = ({ ...options }, ...configs) => {
   const stylistic = options?.stylistic ?? false;
-
-  if (next) {
-    configs.unshift({
-      name: 'maneko/next',
-      plugins: {
-        'maneko-next': pluginNext,
-      },
-      rules: {
-        ...Object.entries({ ...pluginNext.configs.recommended.rules }).reduce(
-          (acc, [key, value]) => {
-            acc[key.replace('@next/next', 'maneko-next')] = value;
-            return acc;
-          },
-          {},
-        ),
-      },
-    });
-  }
-
-  if (jsxA11y) {
-    configs.unshift({
-      name: 'maneko/jsx-a11y',
-      plugins: {
-        'maneko-jsx-a11y': pluginJsxA11y,
-      },
-      rules: {
-        ...Object.entries(pluginJsxA11y.flatConfigs.recommended.rules).reduce(
-          (acc, [key, value]) => {
-            acc[key.replace('jsx-a11y', 'maneko-jsx-a11y')] = value;
-            return acc;
-          },
-          {},
-        ),
-      },
-    });
-  }
 
   if (options.react) {
     configs.unshift({
@@ -89,7 +48,6 @@ export const eslint = (
         'style/jsx-curly-newline': 'off',
         'style/jsx-one-expression-per-line': 'off',
         'style/jsx-quotes': ['error', 'prefer-single'],
-
         'style/linebreak-style': ['error', 'unix'],
         'style/max-len': [
           'error',

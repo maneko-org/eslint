@@ -1,9 +1,7 @@
 declare module '@maneko/eslint' {
   declare type Eslint = (
-    options?: import('@antfu/eslint-config').OptionsConfig & {
-      jsxA11y?: boolean;
-      next?: boolean;
-    } & import('@antfu/eslint-config').TypedFlatConfigItem,
+    options?: import('@antfu/eslint-config').OptionsConfig &
+      import('@antfu/eslint-config').TypedFlatConfigItem,
     ...userConfigs: import('@antfu/eslint-config').Awaitable<
       | import('@antfu/eslint-config').FlatConfigComposer<any, any>
       | import('@antfu/eslint-config').TypedFlatConfigItem
