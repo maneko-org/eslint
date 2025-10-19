@@ -46,18 +46,25 @@
     "lint-inspector": "npx @eslint/config-inspector",
     "prepare": "husky"
   },
+  "peerDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "typescript-eslint": "^8.46.1"
+  },
   "dependencies": {
-    "@antfu/eslint-config": "^6.0.0",
-    "eslint": "^9.38.0"
+    "@antfu/eslint-config": "^6.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "bumpp": "^10.3.1",
+    "eslint": "^9.38.0",
     "eslint-flat-config-utils": "^2.1.4",
     "eslint-plugin-react": "^7.37.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1"
   },
   "lint-staged": {
     "*.{js,ts}": [
