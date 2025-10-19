@@ -30,7 +30,7 @@ pnpm add -D @maneko/eslint eslint @eslint/js
 yarn add -D @maneko/eslint eslint @eslint/js
 
 # npm
-npm install -D @manek/eslint eslint @eslint/js
+npm install -D @maneko/eslint eslint @eslint/js
 ```
 
 > **Note:** VS Code ESLint extension requires `eslint` to be present in the project root `node_modules`. If `eslint` exists only nested inside `node_modules/@maneko/...`, the extension won't find it — that's why we install `eslint` in the host project.
