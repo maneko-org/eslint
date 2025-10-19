@@ -14,11 +14,16 @@
     "url": "https://github.com/maneko-org/eslint/issues"
   },
   "keywords": [
-    "eslint",
-    "react",
-    "next",
+    "javascript",
     "typescript",
-    "node"
+    "jsx",
+    "vue",
+    "astro",
+    "stylistic",
+    "react",
+    "nextjs",
+    "solid",
+    "svelte"
   ],
   "exports": {
     ".": {
@@ -41,18 +46,18 @@
     "lint-inspector": "npx @eslint/config-inspector",
     "prepare": "husky"
   },
+  "peerDependencies": {
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5"
+  },
   "dependencies": {
-    "@antfu/eslint-config": "^6.0.0",
-    "@eslint-react/eslint-plugin": "^2.2.2",
-    "@next/eslint-plugin-next": "^15.5.5",
-    "eslint": "^9.37.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-react-refresh": "^0.4.24"
+    "@antfu/eslint-config": "^6.0.0"
   },
   "devDependencies": {
     "bumpp": "^10.3.1",
+    "eslint": "^9.38.0",
+    "eslint-flat-config-utils": "^2.1.4",
+    "eslint-plugin-react": "^7.37.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
     "prettier": "^3.6.2",
