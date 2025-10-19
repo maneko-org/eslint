@@ -7,12 +7,12 @@ const config = {
   tabWidth: 2,
   semi: true,
   singleQuote: true,
-  trailingComma: "all",
+  trailingComma: 'none',
   bracketSpacing: true,
   bracketSameLine: false,
-  arrowParens: "always",
-  endOfLine: "lf",
-  quoteProps: "consistent",
+  arrowParens: 'always',
+  endOfLine: 'lf',
+  quoteProps: 'consistent',
 };
 
 export default config;
