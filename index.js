@@ -57,7 +57,11 @@ export const eslint = ({ ...options }, ...userConfigs) => {
         'style/no-tabs': 'error',
         'style/operator-linebreak': 'off',
         'style/quote-props': 'off',
-        'style/quotes': ['error', 'single', { allowTemplateLiterals: true }],
+        'style/quotes': [
+          'error',
+          'single',
+          { allowTemplateLiterals: 'always' },
+        ],
         'style/semi': ['error', 'always'],
       },
     });
