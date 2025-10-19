@@ -12,13 +12,13 @@ Install the package and some common peer deps. Pick your package manager:
 
 ```bash
 # pnpm (recommended)
-pnpm add -D @maneko/eslint @eslint/js typescript-eslint
+pnpm add -D @maneko/eslint eslint @eslint/js typescript-eslint
 
 # npm
-npm install -D @maneko/eslint @eslint/js typescript-eslint
+npm install -D @maneko/eslint eslint @eslint/js typescript-eslint
 
 # yarn
-yarn add -D @maneko/eslint @eslint/js typescript-eslint
+yarn add -D @maneko/eslint eslint @eslint/js typescript-eslint
 ```
 
 > Make sure you also install framework peer-dependencies when needed (React, Vue, Astro, Next, etc.).
@@ -38,8 +38,8 @@ export default eslint({
   // (not `react: true`).
   react: {
     // Enables `jsx-a11y` rules for React projects
-    a11y: true,
-  },
+    a11y: true
+  }
 
   // You can also enable other frameworks similarly:
   // vue: { a11y: true }
@@ -100,9 +100,9 @@ export default eslint(
   {
     rules: {
       // override any rule here
-      'no-console': 'warn',
-    },
-  },
+      'no-console': 'warn'
+    }
+  }
 );
 ```
 
