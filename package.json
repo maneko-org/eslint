@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
+    "@maneko/prettier": "^0.0.2",
     "bumpp": "^10.3.1",
     "eslint": "^9.38.0",
     "eslint-flat-config-utils": "^2.1.4",

@@ -9,24 +9,24 @@ export const eslint = ({ ...options }, ...userConfigs) => {
     userConfigs.unshift({
       name: 'maneko/react',
       plugins: {
-        'maneko-react': pluginReact,
+        'maneko-react': pluginReact
       },
       rules: {
         'maneko-react/function-component-definition': [
           'error',
           {
             namedComponents: ['arrow-function'],
-            unnamedComponents: 'arrow-function',
-          },
+            unnamedComponents: 'arrow-function'
+          }
         ],
         'maneko-react/prop-types': 'off',
-        'maneko-react/react-in-jsx-scope': 'off',
+        'maneko-react/react-in-jsx-scope': 'off'
       },
       settings: {
         react: {
-          version: 'detect',
-        },
-      },
+          version: 'detect'
+        }
+      }
     });
   }
 
@@ -49,21 +49,17 @@ export const eslint = ({ ...options }, ...userConfigs) => {
           {
             ignoreComments: true,
             ignoreStrings: true,
-            ignoreTemplateLiterals: true,
-          },
+            ignoreTemplateLiterals: true
+          }
         ],
         'style/member-delimiter-style': 'off',
         'style/multiline-ternary': 'off',
         'style/no-tabs': 'error',
         'style/operator-linebreak': 'off',
         'style/quote-props': 'off',
-        'style/quotes': [
-          'error',
-          'single',
-          { allowTemplateLiterals: 'always' },
-        ],
-        'style/semi': ['error', 'always'],
-      },
+        'style/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'always' }],
+        'style/semi': ['error', 'always']
+      }
     });
   }
 
@@ -76,8 +72,8 @@ export const eslint = ({ ...options }, ...userConfigs) => {
         'antfu/top-level-function': 'off',
         'no-console': 'warn',
         'react-hooks/exhaustive-deps': 'off',
-        'test/prefer-lowercase-title': 'off',
-      },
+        'test/prefer-lowercase-title': 'off'
+      }
     },
     {
       name: 'maneko/sort',
@@ -86,8 +82,8 @@ export const eslint = ({ ...options }, ...userConfigs) => {
           'error',
           {
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-imports': [
           'error',
@@ -102,39 +98,33 @@ export const eslint = ({ ...options }, ...userConfigs) => {
               'object',
               'style',
               'side-effect-style',
-              'unknown',
+              'unknown'
             ],
             internalPattern: ['^~/.*', '^@/.*'],
             newlinesBetween: 'always',
             order: 'asc',
-            type: 'natural',
-          },
+            type: 'natural'
+          }
         ],
         'perfectionist/sort-interfaces': [
           'error',
           {
             groups: ['unknown', 'method', 'multiline'],
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-jsx-props': [
           'error',
           {
             customGroups: {
               callback: 'on*',
-              reserved: ['key', 'ref'],
+              reserved: ['key', 'ref']
             },
-            groups: [
-              'shorthand',
-              'reserved',
-              'multiline',
-              'unknown',
-              'callback',
-            ],
+            groups: ['shorthand', 'reserved', 'multiline', 'unknown', 'callback'],
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-union-types': [
           'error',
@@ -151,15 +141,15 @@ export const eslint = ({ ...options }, ...userConfigs) => {
               'operator',
               'tuple',
               'union',
-              'nullish',
+              'nullish'
             ],
             order: 'asc',
             specialCharacters: 'keep',
-            type: 'alphabetical',
-          },
-        ],
-      },
-    },
+            type: 'alphabetical'
+          }
+        ]
+      }
+    }
   );
 
   return antfu({ ...options, stylistic }, ...userConfigs);
